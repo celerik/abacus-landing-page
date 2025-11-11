@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Eye, Target, FileCheck, TrendingUp, Settings } from "lucide-react";
+import { Eye, Target, FileCheck, TrendingUp, Settings, ShieldCheck } from "lucide-react";
 
 const features = [
   {
@@ -22,6 +22,12 @@ const features = [
     title: "Auditability",
     description:
       "Full audit trails track every action and modification. Complete compliance with regulatory requirements and internal controls.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Security",
+    description:
+      "Enterprise-grade security protects your sensitive financial data. Role-based access controls and encryption ensure data integrity and confidentiality.",
   },
   {
     icon: TrendingUp,
@@ -77,7 +83,7 @@ export default function FeatureCards() {
             Built for Excellence
           </h2>
           <p className="text-xl text-secondary max-w-3xl mx-auto">
-            Five pillars that define Abacus — precision, reliability, and
+            Six pillars that define Abacus — precision, reliability, and
             performance in every feature.
           </p>
         </motion.div>
