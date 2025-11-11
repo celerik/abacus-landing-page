@@ -98,7 +98,7 @@ export default function SceneSection({ scene, isReversed }: SceneSectionProps) {
     <motion.section
       ref={ref}
       id={`scene-${scene.id}`}
-      className="py-20 md:py-32 px-6 bg-dark-300"
+      className="py-20 md:py-32 px-6 bg-gradient-to-br from-black via-blue-950 to-black"
       variants={containerVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
