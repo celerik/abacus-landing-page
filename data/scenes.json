@@ -1,0 +1,165 @@
+{
+  "scenes": [
+    {
+      "id": 0,
+      "title": "Introduction & Value Proposition",
+      "narration": "Welcome to **Abacus** — where institutional loan management meets clarity, precision, and scale.\n\nIn a world of complex portfolios and fragmented systems, Abacus brings it all together — offering **a single, unified platform** to manage every loan, transaction, and cash flow from **origination to settlement**.\n\nWhat once demanded countless spreadsheets and manual reconciliation now unfolds seamlessly in one intuitive workspace — designed for **transparency, accuracy, and total control**.\n\nFrom **real-time accruals** to **regulatory compliance**, from **data integrity** to **complete audit trails**, Abacus redefines how financial teams operate — empowering them to work smarter, move faster, and focus on what truly drives performance.\n\nThis is **Abacus** — the future of institutional loan management.",
+      "image": "/scenes/Scene-00-Introduction-Value-Proposition.png",
+      "category": "overview"
+    },
+    {
+      "id": 1,
+      "title": "System Overview & Loan Search",
+      "narration": "On this screen, we explore the **Search & Portfolio Overview** module — the starting point for navigating every transaction within Abacus.\n\nBeyond loans, users can search and analyze a full spectrum of financial instruments — including **Credit Linked Notes, Equity Investments, FX positions, Real Estate assets, and other structured products** — all consolidated in one powerful workspace.\n\nThe results table displays comprehensive details such as **balance type, principal amount, accrued interest, next payment date**, and more, giving teams an instant snapshot of their portfolio health.\n\nAbacus features **advanced filtering and global search capabilities**, allowing users to refine datasets across multiple attributes simultaneously — from entity, currency, and status to custom tags and business area.\n\nThe **\"As of Date\"** control enables historical look-backs, letting users visualize positions exactly as they stood at any point in time — a critical function for **valuation, auditing, and compliance reviews**.\n\nUsers can also **create and save personalized views** tailored to specific needs — such as **loans by lender or borrower**, **portfolios nearing maturity**, **overdue interest accounts**, or **trades grouped by business area**.\n\nThis combination of breadth, precision, and customization transforms Abacus into a true command center — empowering financial teams to navigate complex portfolios effortlessly and stay fully in control of their trade lifecycle.",
+      "image": "/scenes/Scene-01-System-Overview.png",
+      "category": "overview"
+    },
+    {
+      "id": 2,
+      "title": "Creating a New Loan",
+      "narration": "To create a new financial instrument, users simply navigate to **\"New Trade\"** on the sidebar.\n\nAbacus supports multiple trade types — including **Loans**, **Credit Linked Notes**, **Equity Investments**, **FX**, **Real Estate**, **Tradable Securities** and other structured products — each following its own workflow and validation rules.\n\nIn this example, we'll create a **Loan**. Once the trade type is selected, the system guides the user through a **step-by-step creation wizard**, ensuring data accuracy and consistency across all transactions.\n\nThis guided flow simplifies complex setups while enforcing the organization's data standards, helping users create new trades confidently and without errors.",
+      "image": "/scenes/Scene-02-Creating-New-Loan.png",
+      "category": "setup"
+    },
+    {
+      "id": 3,
+      "title": "Loan Setup Wizard (Pre-Form)",
+      "narration": "Before entering the full loan form, Abacus introduces a **guided setup wizard** — a smart, three-step flow that captures the **core information** of every trade.\n\nThe first step defines the **calendar** and **jurisdiction**, ensuring that holidays and settlement rules align with local market conventions.\n\nNext, users set the **value date**, **maturity date**, and **duration** of the loan. The system automatically calculates the term and validates calendar logic — for example, warning the user if the maturity date falls on a non-business day.\n\nFinally, the wizard requests the **interest effective date**, establishing when accruals begin.\n\nThis pre-form process streamlines data entry, minimizes errors, and guarantees that every loan starts with accurate temporal and market parameters — before moving on to the detailed configuration screen.",
+      "image": "/scenes/Scene-03-Loan-Wizard-Pre-Form.png",
+      "category": "setup"
+    },
+    {
+      "id": 4,
+      "title": "Loan Form: Core Transaction Details",
+      "narration": "Once the core setup is completed, Abacus opens the **loan form**, where users can configure every aspect of the transaction in detail.\n\nThe **Transaction section** defines the foundation of the loan — including its nickname, owner, and liquidity classification.\n\nHere, users can specify the **instrument type**, such as a *Promissory Note*, select the **transaction currency**, and define whether the position is **secured** or **unsecured**.\n\nThe form also includes fields for **seniority** and **collateral details**, ensuring that all structural and risk attributes are captured right from the start.\n\nEvery field is clearly organized, validated, and aligned with the entity's operational standards — helping users create accurate and compliant trades effortlessly.",
+      "image": "/scenes/Scene-04-Loan-Form-Transaction-Details.png",
+      "category": "form"
+    },
+    {
+      "id": 5,
+      "title": "Loan Form: Key Dates & Grace Period",
+      "narration": "The next section defines the **key dates** that govern the lifecycle of the loan.\n\nThe system clearly displays the start and end dates, highlights the corresponding weekdays, and even indicates the overall loan duration.\n\nAdditionally, users can configure **grace periods** and **breakpoints**, providing flexibility to model special payment conditions or non-standard interest periods.\n\nThese date controls ensure every loan is properly aligned with business-day conventions and organizational policies — eliminating manual errors in scheduling.",
+      "image": "/scenes/Scene-05-Loan-Form-Key-Dates-Grace-Period.png",
+      "category": "form"
+    },
+    {
+      "id": 6,
+      "title": "Loan Form: Links & Tags",
+      "narration": "The **Links** section allows users to connect a loan with other related trades — such as hedging instruments, underlying assets, or reference notes.\n\nThese **linked trades** create logical relationships across the portfolio, giving teams a clear view of dependencies and exposure chains.\n\nIn addition, users can apply **custom tags** to categorize transactions by type, purpose, or internal reporting needs.\n\nThese links and tags transform static data into a **connected dataset**, enabling smarter analytics, traceability, and group-level insights throughout the system.",
+      "image": "/scenes/Scene-06-Loan-Form-Links-Tags.png",
+      "category": "form"
+    },
+    {
+      "id": 7,
+      "title": "Loan Form: Parties & Counterparties",
+      "narration": "The **Parties** section defines the financial structure of the loan — clearly distinguishing between **lenders** and **borrowers**.\n\nEach party can be selected from the entity master data, with automatic linkage to its internal family or external classification.\n\nAs users input amounts, Abacus dynamically validates that **lender and borrower totals match**, ensuring perfect balance and eliminating manual reconciliation.\n\nThe system also calculates participation percentages in real time, giving full transparency into each counterparty's share of the transaction.\n\nThis structured approach guarantees both accounting accuracy and operational clarity across all participants in the deal.",
+      "image": "/scenes/Scene-07-Loan-Form-Parties-Counterparties.png",
+      "category": "form"
+    },
+    {
+      "id": 8,
+      "title": "Loan Form: Agents & Fee Participants",
+      "narration": "In addition to lenders and borrowers, Abacus allows users to register **other parties** involved in the transaction — such as **agents**, **guarantors**, **custodians**, **arrangers**, **sponsors**, or any **other participant** linked to the loan.\n\nThese entities can be configured to receive **fees or commissions**, either as part of their role in the deal or as separate payees.\n\nFor example, a lender already defined in the transaction may also collect administrative or servicing fees, or a new external agent may be added exclusively to manage specific payments.\n\nThis flexible party structure ensures that every participant — financial or operational — is accurately represented within the same loan record, maintaining full transparency of responsibilities and cash flows.",
+      "image": "/scenes/Scene-08-Loan-Form-Agents-Fee-Participants.png",
+      "category": "form"
+    },
+    {
+      "id": 9,
+      "title": "Loan Form: Disbursement Amount",
+      "narration": "In this section, we define the **financial amounts** that describe the core of the loan. The **Principal Amount** represents the total nominal value of the loan.\n\nThe **Disbursement Amount** indicates the actual cash released to the borrower, reflecting a **discounted transaction**.\n\nOn the right, we can see the **Asset Price**, automatically calculated, showing if the loan was originated **below par** or **above par**.\n\nThis flexibility allows Abacus to model scenarios like **secondary market purchases**, **discounted issuances**, or **premium adjustments** with full transparency.",
+      "image": "/scenes/Scene-09-Loan-Form-Disbursement-Amount.png",
+      "category": "form"
+    },
+    {
+      "id": 10,
+      "title": "Loan Form: Interest Payment Setup",
+      "narration": "The **Interest Payment** section defines how interest accrues and when it's paid throughout the life of the loan.\n\nHere, users can configure the **calculation base**, such as *30/360* or *Actual/365*, and define the applicable date ranges for each accrual period.\n\nThe **effective date** is automatically aligned with the loan's value date, while Abacus clearly indicates when interest starts accruing.\n\nUsers can also define the **interest periodicity**, whether it's *monthly*, *quarterly*, or a single *bullet payment* at maturity.\n\nThis flexibility allows Abacus to model virtually any interest structure — from simple fixed-rate loans to complex custom payment schedules — with full transparency and control.",
+      "image": "/scenes/Scene-10-Loan-Form-Interest-Payment-Setup.png",
+      "category": "form"
+    },
+    {
+      "id": 11,
+      "title": "Loan Form: Coupon & Default Rate",
+      "narration": "Abacus provides a flexible and intuitive way to configure **interest rates**, adapting to both fixed and floating structures.\n\nIn the **Coupon** setup, users can define the rate type — choosing between **Fixed** or **Floating** — and specify parameters such as **spread**, **compounding**, and **frequency**.\n\nFor **floating-rate loans**, Abacus supports a wide range of market indices like **SOFR**, automatically displaying the **base rate** and allowing the user to apply an additional spread.\n\nThis modular configuration ensures that every trade accurately reflects its financial terms — whether it's a simple fixed coupon or a dynamic floating rate linked to real-time market benchmarks.\n\nBelow, the **Default Rate** section allows teams to define the behavior in case of payment delays, maintaining precise control over how interest continues to accrue.",
+      "image": "/scenes/Scene-11-Loan-Form-Coupon-Default-Rate.png",
+      "category": "form"
+    },
+    {
+      "id": 12,
+      "title": "Loan Form: Principal Payment",
+      "narration": "The **Principal Payment** section defines how and when the loan's principal is repaid.\n\nHere, users can set up the **payment schedule**, specifying exact dates, periodicity, and total repayment amounts.\n\nAbacus supports both **bullet** and **amortizing** structures, as well as fully custom payment plans, making it easy to mirror real-world loan agreements.\n\nThe system automatically validates totals and aligns principal payments with interest schedules, ensuring consistency throughout the trade lifecycle.\n\nAdditionally, loans can be flagged as **prepayable**, giving institutions the flexibility to manage early settlements and optimize their portfolios.",
+      "image": "/scenes/Scene-12-Loan-Form-Principal-Payment.png",
+      "category": "form"
+    },
+    {
+      "id": 13,
+      "title": "Loan Form: Covenants & Compliance",
+      "narration": "The **Covenants** section allows users to capture the legal and operational commitments tied to each loan.\n\nHere, **material covenants** can be registered and linked to specific documents, indicating whether they refer to a particular entity or to the trade itself.\n\nAbacus also supports **reporting covenants**, defining the frequency and type of reporting obligations required by lenders or regulators.\n\nThis structured approach ensures that every contractual condition — from performance ratios to periodic disclosures — is fully documented and traceable within the same system.\n\nBy integrating covenants directly into the loan record, Abacus bridges financial data with compliance management, helping institutions monitor commitments seamlessly and reduce operational risk.",
+      "image": "/scenes/Scene-13-Loan-Form-Covenants-Compliance.png",
+      "category": "compliance"
+    },
+    {
+      "id": 14,
+      "title": "Loan Form: Document Management",
+      "narration": "The **Documents** section centralizes all files associated with the loan — from KYC forms to legal agreements and supporting evidence.\n\nUsers can upload single or multiple documents, define review dates, and track completion status directly from the interface.\n\nEach document is linked to the corresponding trade, ensuring that compliance, audit, and operational teams always work with synchronized and validated information.\n\nBy embedding document management into the loan workflow, Abacus eliminates the need for external repositories — creating a single, secure source of truth for every transaction.",
+      "image": "/scenes/Scene-14-Loan-Form-Document-Management.png",
+      "category": "compliance"
+    },
+    {
+      "id": 15,
+      "title": "Loan Form: Save & Confirmation",
+      "narration": "Once all details are completed, Abacus automatically validates the transaction before saving.\n\nA summary confirmation displays the key elements — total number of lenders and borrowers, the loan duration, and the number of daily accruals that will be generated by the system.\n\nThis final checkpoint gives users full visibility before committing the data, ensuring accuracy and consistency across financial, operational, and compliance dimensions.\n\nWith a single click, the loan is created and becomes part of Abacus's centralized portfolio, ready for monitoring, reporting, and analytics.",
+      "image": "/scenes/Scene-15-Loan-Form-Save-Confirmation.png",
+      "category": "form"
+    },
+    {
+      "id": 16,
+      "title": "Loan Summary: Info",
+      "narration": "After saving, Abacus automatically redirects to the **Loan Summary**, where all the information entered is consolidated in a single, structured view.\n\nHere, users can instantly verify key attributes — transaction dates, principal amounts, interest terms, payment schedules, and linked parties.\n\nDynamic sections such as **Amounts**, **Payments**, and **Links** reflect the latest values as of the selected date, ensuring real-time transparency across the portfolio.\n\nFrom this screen, users can navigate to deeper layers — like **Accruals**, **History**, or **Documents** — making Abacus not just a registration tool, but a full lifecycle management platform for institutional loans.\n\nEvery trade is auditable, traceable, and ready for analytics — all from this unified dashboard.",
+      "image": "/scenes/Scene-16-Loan-Summary.png",
+      "category": "summary"
+    },
+    {
+      "id": 17,
+      "title": "Loan Summary: Events",
+      "narration": "The **Events** section provides a clear timeline of all scheduled settlements associated with the loan.\n\nEach row represents a cash flow — whether it's a disbursement, an interest payment, or a final principal settlement.\n\nAbacus automatically tracks the amounts due, the responsible parties, and the exact payment dates, ensuring operational accuracy and transparency.\n\nThe system also distinguishes between payables and receivables, helping users monitor liquidity positions and pending reconciliations in real time.\n\nThis view becomes the heartbeat of daily operations — every cash movement starts here.",
+      "image": "/scenes/Scene-17-Loan-Summary-Events.png",
+      "category": "summary"
+    },
+    {
+      "id": 18,
+      "title": "Loan Summary: Accruals",
+      "narration": "The **Accruals** section provides a line-by-line breakdown of daily interest calculations.\n\nEach record shows the effective principal, rate, and daily accrual amount for every lender–borrower relationship.\n\nAbacus automatically generates these entries according to the loan's terms, day count convention, and interest schedule — ensuring that every cent of interest is precisely tracked.\n\nThis granular view allows finance teams to audit, reconcile, and forecast interest earnings or expenses with full transparency.\n\nEven non-business days or holidays are recognized and flagged automatically, maintaining complete accuracy in time-based calculations.",
+      "image": "/scenes/Scene-18-Loan-Summary-Accruals.png",
+      "category": "summary"
+    },
+    {
+      "id": 19,
+      "title": "Loan Summary: Trade Actions & History",
+      "narration": "The **History** section acts as a complete audit trail of every action taken on the loan.\n\nFrom its initial creation to any subsequent modifications, every event is timestamped and permanently recorded.\n\nUsers can perform key lifecycle actions directly from here — such as amendments, prepayments, transfers, or even complex adjustments like payment-in-kind or re-cut operations.\n\nEach operation instantly generates a new historical entry, ensuring full traceability and compliance with internal and external audit requirements.\n\nThis makes Abacus a truly enterprise-grade platform — where no action goes untracked.",
+      "image": "/scenes/Scene-19-Loan-Summary-Trade-Actions-History.png",
+      "category": "summary"
+    },
+    {
+      "id": 20,
+      "title": "Loan Summary: Trade Tree",
+      "narration": "The **Tree View** provides a visual map of the entire lifecycle of a loan — showing how one instrument can evolve into many.\n\nEach node represents a financial contract — whether it's the original loan, a novation, an asset lending transaction, a participation, etc.\n\nThe connections between them form a live network of relationships, letting users instantly trace how value and obligations flow across instruments.\n\nIn complex portfolios, this view can reveal entire hierarchies of trades, making Abacus not just a transaction engine, but a visual analytics platform for structured finance.",
+      "image": "/scenes/Scene-20-Loan-Summary-Trade-Tree.png",
+      "category": "summary"
+    },
+    {
+      "id": 21,
+      "title": "Settlements",
+      "narration": "The **Settlements module** bridges financial operations with actual bank activity — connecting what should happen with what really happened.\n\nEach event generated by the system — whether it's an interest payment, a principal repayment, or a fee — is matched against real cash movements imported from the bank.\n\nAbacus automatically detects matches based on amount, date, and payment method, while also allowing users to manually reconcile partial or late payments.\n\nThis process ensures complete transparency between expected cashflows and real-world transactions, creating a single source of truth for financial reconciliation.\n\nThe result: faster month-end closings, reduced manual errors, and full auditability of every payment event.",
+      "image": "/scenes/Scene-21-Settlements.png",
+      "category": "summary"
+    },
+    {
+      "id": 22,
+      "title": "The Abacus Promise",
+      "narration": "Thank you for exploring **Abacus** — where technology and precision redefine institutional loan management.\n\nEvery feature you've seen reflects one vision: to give financial teams **clarity, control, and confidence** in every transaction.\n\nAbacus isn't just a system — it's a foundation for smarter operations, stronger compliance, and faster decisions.\n\nBuilt for scale. Designed for performance. Trusted by professionals.\n\n**Abacus — because precision is power.**",
+      "image": null,
+      "category": "closing"
+    }
+  ]
+}
