@@ -2,7 +2,6 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight } from "lucide-react";
 
 export default function ClosingSection() {
   const ref = useRef(null);
@@ -88,27 +87,10 @@ export default function ClosingSection() {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <p className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-purple-200 mb-12">
+            <p className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-purple-200">
               Abacus — because precision is power.
             </p>
           </motion.div>
-
-          <motion.a
-            href="#contact"
-            className="group inline-flex items-center gap-3 px-10 py-5 bg-white text-slate-900 rounded-xl font-semibold text-lg hover:bg-blue-50 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={
-              isInView
-                ? { opacity: 1, scale: 1 }
-                : { opacity: 0, scale: 0.9 }
-            }
-            transition={{ duration: 0.5, delay: 0.8 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            Request a Demo
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </motion.a>
         </motion.div>
       </div>
     </section>
