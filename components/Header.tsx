@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { getImagePath } from "@/lib/image-path";
 
 export default function Header() {
   return (
@@ -16,7 +17,7 @@ export default function Header() {
           {/* Logo and tagline */}
           <div className="flex items-center gap-3">
             <Image
-              src="/Celerik-logo.png"
+              src={getImagePath("/Celerik-logo.png")}
               alt="Celerik"
               width={120}
               height={40}
