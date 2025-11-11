@@ -1,8 +1,8 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import {
   Monitor,
@@ -17,6 +17,8 @@ import {
   ShieldCheck,
   Folder,
   CheckCircle,
+  Maximize2,
+  X,
 } from "lucide-react";
 
 interface Scene {
@@ -56,6 +58,34 @@ const getIconForCategory = (category: string) => {
 export default function SceneSection({ scene, isReversed }: SceneSectionProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Block scroll when modal is open
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isModalOpen]);
+
+  // Close modal on ESC key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsModalOpen(false);
+      }
+    };
+    if (isModalOpen) {
+      window.addEventListener('keydown', handleEscape);
+    }
+    return () => {
+      window.removeEventListener('keydown', handleEscape);
+    };
+  }, [isModalOpen]);
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -113,9 +143,12 @@ export default function SceneSection({ scene, isReversed }: SceneSectionProps) {
           {scene.image && (
             <motion.div
               variants={imageVariants}
-              className={`relative ${isReversed ? "lg:col-start-2" : ""}`}
+              className={`relative group ${isReversed ? "lg:col-start-2" : ""}`}
             >
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
+              <div 
+                className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-blue-500/20"
+                onClick={() => setIsModalOpen(true)}
+              >
                 <Image
                   src={scene.image}
                   alt={scene.title}
@@ -124,6 +157,15 @@ export default function SceneSection({ scene, isReversed }: SceneSectionProps) {
                   className="w-full h-auto"
                   priority={scene.id === 0}
                 />
+                {/* Expand indicator overlay */}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center">
+                  <div className="absolute top-4 right-4 bg-blue-600 p-2 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-100 scale-90 shadow-lg">
+                    <Maximize2 className="w-5 h-5 text-white" />
+                  </div>
+                  <div className="text-white font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 bg-blue-600 px-4 py-2 rounded-lg">
+                    Click to enlarge
+                  </div>
+                </div>
               </div>
               {/* Decorative element */}
               <div className="absolute -z-10 -inset-4 bg-gradient-to-br from-blue-100 to-purple-100 rounded-3xl opacity-30 blur-2xl" />
@@ -161,6 +203,59 @@ export default function SceneSection({ scene, isReversed }: SceneSectionProps) {
           </motion.div>
         </div>
       </div>
+
+      {/* Image Modal/Lightbox */}
+      <AnimatePresence>
+        {isModalOpen && scene.image && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
+            onClick={() => setIsModalOpen(false)}
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="absolute top-4 right-4 z-10 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors duration-200 group"
+              aria-label="Close modal"
+            >
+              <X className="w-6 h-6 text-white group-hover:rotate-90 transition-transform duration-300" />
+            </button>
+
+            {/* Modal content */}
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="relative max-w-7xl max-h-[90vh] w-full"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="relative rounded-xl overflow-hidden shadow-2xl">
+                <Image
+                  src={scene.image}
+                  alt={scene.title}
+                  width={2400}
+                  height={1600}
+                  className="w-full h-auto"
+                  quality={100}
+                />
+              </div>
+              {/* Image title */}
+              <div className="mt-4 text-center">
+                <h3 className="text-xl md:text-2xl font-semibold text-white">
+                  {scene.title}
+                </h3>
+                <p className="text-sm text-slate-400 mt-1">
+                  Click outside or press ESC to close
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.section>
   );
 }
