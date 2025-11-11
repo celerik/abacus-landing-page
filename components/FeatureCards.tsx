@@ -64,7 +64,7 @@ export default function FeatureCards() {
   };
 
   return (
-    <section className="py-20 md:py-32 px-6 bg-slate-50">
+    <section className="py-20 md:py-32 px-6 bg-dark-200">
       <div className="max-w-7xl mx-auto">
         <motion.div
           ref={ref}
@@ -95,24 +95,24 @@ export default function FeatureCards() {
                 key={feature.title}
                 variants={cardVariants}
                 whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                className={`group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-slate-200 ${
+                className={`group relative bg-dark-100 rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 border border-blue-900/30 ${
                   index === features.length - 1 && features.length % 3 !== 0
                     ? "md:col-span-2 lg:col-span-1"
                     : ""
                 }`}
               >
                 {/* Icon */}
-                <div className="inline-flex p-4 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <IconComponent className="w-8 h-8 text-blue-600" />
+                <div className="inline-flex p-4 bg-gradient-to-br from-blue-950/40 to-purple-950/40 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300 border border-blue-800/30">
+                  <IconComponent className="w-8 h-8 text-blue-400" />
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-foreground mb-4">
+                <h3 className="text-2xl font-bold text-white mb-4">
                   {feature.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-secondary leading-relaxed">
+                <p className="text-slate-400 leading-relaxed">
                   {feature.description}
                 </p>
 

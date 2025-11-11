@@ -33,7 +33,7 @@ interface SceneSectionProps {
 }
 
 const getIconForCategory = (category: string) => {
-  const iconClass = "w-8 h-8 text-blue-600";
+  const iconClass = "w-8 h-8 text-blue-400";
   
   switch (category) {
     case "overview":
@@ -98,7 +98,7 @@ export default function SceneSection({ scene, isReversed }: SceneSectionProps) {
     <motion.section
       ref={ref}
       id={`scene-${scene.id}`}
-      className="py-20 md:py-32 px-6 bg-background"
+      className="py-20 md:py-32 px-6 bg-dark-300"
       variants={containerVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -138,15 +138,12 @@ export default function SceneSection({ scene, isReversed }: SceneSectionProps) {
             }`}
           >
             {/* Icon */}
-            <div className={`inline-flex p-3 bg-blue-50 rounded-xl ${!scene.image ? "mx-auto" : ""}`}>
+            <div className={`inline-flex p-3 bg-blue-950/40 rounded-xl border border-blue-800/30 ${!scene.image ? "mx-auto" : ""}`}>
               {getIconForCategory(scene.category)}
             </div>
 
-            {/* Scene number and title */}
+            {/* Scene title */}
             <div>
-              <p className="text-sm font-semibold text-blue-600 mb-2">
-                Scene {scene.id}
-              </p>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 {scene.title}
               </h2>

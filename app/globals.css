@@ -4,12 +4,12 @@
 
 @layer base {
   :root {
-    --background: 250 252 252;
-    --foreground: 15 23 42;
+    --background: 10 10 15;
+    --foreground: 228 228 231;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
   }
 }
 
@@ -24,22 +24,22 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar styling */
+/* Custom scrollbar styling - Dark theme */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #0f0f18;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #94a3b8;
+  background: #3B82F6;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #64748b;
+  background: #60A5FA;
 }
 
 /* Remove default focus outline and add custom one */
