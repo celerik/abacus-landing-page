@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/abacus-landing-page',
+  // Solo usa basePath en producción (GitHub Pages)
+  basePath: process.env.NODE_ENV === 'production' ? '/abacus-landing-page' : '',
   images: {
     unoptimized: true,
   },

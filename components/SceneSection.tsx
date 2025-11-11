@@ -4,6 +4,7 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
+import { getImagePath } from "@/lib/image-path";
 import {
   Monitor,
   Search,
@@ -150,7 +151,7 @@ export default function SceneSection({ scene, isReversed }: SceneSectionProps) {
                 onClick={() => setIsModalOpen(true)}
               >
                 <Image
-                  src={scene.image}
+                  src={getImagePath(scene.image)}
                   alt={scene.title}
                   width={1200}
                   height={800}
@@ -235,7 +236,7 @@ export default function SceneSection({ scene, isReversed }: SceneSectionProps) {
             >
               <div className="relative rounded-xl overflow-hidden shadow-2xl bg-white">
                 <Image
-                  src={scene.image}
+                  src={getImagePath(scene.image)}
                   alt={scene.title}
                   width={2400}
                   height={1600}
