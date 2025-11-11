@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  basePath: '/abacus-landing-page',
   images: {
-    formats: ['image/webp'],
+    unoptimized: true,
   },
 };
 
