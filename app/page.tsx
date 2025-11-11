@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import SceneSection from "@/components/SceneSection";
 import FeatureCards from "@/components/FeatureCards";
@@ -10,6 +11,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
+      <Header />
       <HeroSection />
       
       <div id="scenes">
