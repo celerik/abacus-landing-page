@@ -233,7 +233,7 @@ export default function SceneSection({ scene, isReversed }: SceneSectionProps) {
               className="relative max-w-7xl max-h-[90vh] w-full"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="relative rounded-xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-xl overflow-hidden shadow-2xl bg-white">
                 <Image
                   src={scene.image}
                   alt={scene.title}
