@@ -22,34 +22,12 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#scenes"
+                  href="https://www.celerik.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-slate-400 hover:text-white transition-colors duration-200"
                 >
-                  Explore Features
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  className="text-slate-400 hover:text-white transition-colors duration-200"
-                >
-                  Request Demo
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-slate-400 hover:text-white transition-colors duration-200"
-                >
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-slate-400 hover:text-white transition-colors duration-200"
-                >
-                  Support
+                  Celerik Website
                 </a>
               </li>
             </ul>
